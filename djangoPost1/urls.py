@@ -26,7 +26,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.home_page,name='home'),
     path('about/',views.about_page,name='about'),
-    path('posts/',include('posts.urls'))
+    path('posts/',include('posts.urls')),
+    path('users/',include('users.urls'))
 ]
 
 if settings.DEBUG:

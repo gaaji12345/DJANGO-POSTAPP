@@ -1,14 +1,9 @@
-<!DOCTYPE html>
-{% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-<body>
+{% extends 'base.html' %}
 
+{% block content %}
+	
 <h1>Welocme to our home page</h1>
+<a href="{% url 'about' %}">ABOUT</a>
 
-</body>
-</html>
+{% endblock %}
+

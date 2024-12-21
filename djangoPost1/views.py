@@ -1,7 +1,9 @@
 from django.shortcuts import  render
+from posts.models import Post
 
 def home_page(request):
-    return  render(request,'home.html')
+    posts=Post.objects.all().order_by('-id')
+    return  render(request,'home.html',{'posts':posts})
 
 
 def about_page(request):
